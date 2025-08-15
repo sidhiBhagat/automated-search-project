@@ -16,7 +16,7 @@ A voice-enabled web application that allows users to search YouTube, Google, and
 
 ## 🚀 Live Demo
 
-[Click here to try it]
+[live demo here:]👉(https://automated-search-project-production.up.railway.app/)
 
 ## 📂 Project Structure
 │
