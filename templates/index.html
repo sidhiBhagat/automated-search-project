@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-robot"></i> Your AI Assistant</h1>
+            <p>Search the web with voice commands or text input</p>
+        </div>
+
+        <div class="main-card">
+            <div class="input-section">
+                <div class="input-container">
+                    <input type="text" id="searchInput" placeholder="Enter your command or click the mic to speak...">
+                    <button id="voiceBtn" class="voice-btn" title="Click to speak">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                
+                <div class="voice-status" id="voiceStatus">
+                    <span class="status-text">Click the microphone to start voice recognition</span>
+                </div>
+            </div>
+
+            <div class="button-section">
+                <button class="search-btn youtube-btn" onclick="performSearch('youtube')">
+                    <i class="fab fa-youtube"></i>
+                    Search YouTube
+                </button>
+                <button class="search-btn google-btn" onclick="performSearch('google')">
+                    <i class="fab fa-google"></i>
+                    Search Google
+                </button>
+                <button class="search-btn instagram-btn" onclick="performSearch('instagram')">
+                    <i class="fab fa-instagram"></i>
+                    Search Instagram
+                </button>
+            </div>
+
+            <div class="voice-commands">
+                <h3><i class="fas fa-lightbulb"></i> Voice Commands Examples:</h3>
+                <ul>
+                    <li>"Search YouTube for music videos"</li>
+                    <li>"Google weather today"</li>
+                    <li>"Instagram john_doe" or "Find @username on Instagram"</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="status-message" id="statusMessage"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
